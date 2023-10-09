@@ -10,7 +10,7 @@ present(alert, animated: true, completion: nil)
 
 extension LoginViewController {
     func credentialsExist() -> Bool {
-        return LoginCredentials.getCredentials() != nil
+        return LoginCredentials.getUserCredentials() != nil
     }
     
     func credentialsExpired() -> Bool {
@@ -25,6 +25,7 @@ extension LoginViewController {
             return
         }
         updateUserInProgress = true
+        saveUser()
         interactor?.checkCurrentUserRequest()
     }
 }
