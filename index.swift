@@ -10,7 +10,7 @@ present(alert, animated: true, completion: nil)
 
 extension LoginViewController {
     func credentialsExist() -> Bool {
-        return LoginCredentials.getCredentials() != nil
+        return LoginCredentials.getUserId() != nil
     }
     
     func credentialsExpired() -> Bool {
